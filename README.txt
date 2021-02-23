@@ -1,4 +1,4 @@
-**Facilitador De Ropa De Segunda Mano**
+**Facilitador De Articulo De Segunda Mano**
 
 Las buenas cosas necesitan de una segunda oportunidad, por
-esa razon se facilita la ropa de segunda mano.
+esa razon se facilita articulos de segunda mano.
