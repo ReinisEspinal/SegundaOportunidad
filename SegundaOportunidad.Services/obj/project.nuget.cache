@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "cTgHn/Chx4Rvp0qp1Kbg/7z4PCOuqSjvc1EEt39bWF0meb+POqiZWO8NO9AKPn/uTUtdb7KVLPHHS+JJU2ZmyA==",
+  "success": true,
+  "projectFilePath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Services\\SegundaOportunidad.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Reinis\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Reinis\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
