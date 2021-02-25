@@ -1,0 +1,41 @@
+[33mcommit 7961b8d4b4b95c4ce6d3cdf618dc79e6851638c0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Wed Feb 24 21:36:59 2021 -0400
+
+    Agrega carpeta con la clase base
+
+[33mcommit 6c18d278925ecf9a9632a3884916500478b2cc5c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:49:07 2021 -0400
+
+    Update README.txt
+
+[33mcommit cd95a880b4d7c159939007c93e5a69b8a4bb154b[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:48:43 2021 -0400
+
+    Update README.txt
+
+[33mcommit d78ddb5b48a10e6eaea3ea3011c2957cfef92a24[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:48:21 2021 -0400
+
+    Update README.txt
+
+[33mcommit d489bbcfaf16c8eb311eb6c373256f4211557900[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:46:56 2021 -0400
+
+    Agrega un descripcion al archivo README
+
+[33mcommit 0e9edcab5cc5a1132401f70bb37129b36ed68ed5[m[33m ([m[1;31morigin/DEV[m[33m)[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:35:41 2021 -0400
+
+    Implementando la arquitectura Orion
+
+[33mcommit 8bd95e5dc146ce288b104210f6f29afb2744a4a4[m
+Author: Reinis <26393752+ReinisEspinal@users.noreply.github.com>
+Date:   Mon Feb 22 23:12:49 2021 -0400
+
+    Primer commit
