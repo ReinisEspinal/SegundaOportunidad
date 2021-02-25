@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SegundaOportunidad.Domain.Entities
 {
     public class Inventario
     {
-
+        [Key]
         public int Inventario_ID { get; set; }
         public int Almacen_ID { get; set; }
         public int Producto_ID { get; set; }

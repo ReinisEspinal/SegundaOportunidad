@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaOportunidad.Domain", "SegundaOportunidad.Domain\SegundaOportunidad.Domain.csproj", "{45B606A6-7C3E-4382-8DAA-04B5E5B21962}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.Domain", "SegundaOportunidad.Domain\SegundaOportunidad.Domain.csproj", "{45B606A6-7C3E-4382-8DAA-04B5E5B21962}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaOportunidad.Repository", "SegundaOportunidad.Repository\SegundaOportunidad.Repository.csproj", "{4C1D9D9F-5BC0-4236-AEA2-CF2C79B08016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.Repository", "SegundaOportunidad.Repository\SegundaOportunidad.Repository.csproj", "{4C1D9D9F-5BC0-4236-AEA2-CF2C79B08016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaOportunidad.Services", "SegundaOportunidad.Services\SegundaOportunidad.Services.csproj", "{F502BC09-1501-489C-93E0-B2354BFB7E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.Services", "SegundaOportunidad.Services\SegundaOportunidad.Services.csproj", "{F502BC09-1501-489C-93E0-B2354BFB7E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaOportunidad.WebUi", "SegundaOportunidad.WebUi\SegundaOportunidad.WebUi.csproj", "{C57EE091-2BF7-438C-8872-AE5A2D7FB839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.WebUi", "SegundaOportunidad.WebUi\SegundaOportunidad.WebUi.csproj", "{C57EE091-2BF7-438C-8872-AE5A2D7FB839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaMano.Data.Prueba", "SegundaMano.Data.Prueba\SegundaMano.Data.Prueba.csproj", "{744B0926-6543-41A3-942A-9DD968E2DE2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C57EE091-2BF7-438C-8872-AE5A2D7FB839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C57EE091-2BF7-438C-8872-AE5A2D7FB839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C57EE091-2BF7-438C-8872-AE5A2D7FB839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{744B0926-6543-41A3-942A-9DD968E2DE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{744B0926-6543-41A3-942A-9DD968E2DE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{744B0926-6543-41A3-942A-9DD968E2DE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{744B0926-6543-41A3-942A-9DD968E2DE2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

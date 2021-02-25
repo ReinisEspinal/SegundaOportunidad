@@ -5,14 +5,18 @@ namespace SegundaOportunidad.Repository.Context
 {
     public class SegundaOportunidadContext : DbContext
     {
-        public SegundaOportunidadContext()
+        private string _cnnString;
+        public SegundaOportunidadContext(string _cnnString)
         {
-
+            this._cnnString = _cnnString;
         }
         public SegundaOportunidadContext(DbContextOptions<SegundaOportunidadContext> options) : base(options)
         {
 
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        { options.UseSqlServer(_cnnString); }
+
 
         public virtual DbSet<Almacen> Alamcenes { get; set; }
         public virtual DbSet<CategoriaProducto> CategoriaProductos { get; set; }

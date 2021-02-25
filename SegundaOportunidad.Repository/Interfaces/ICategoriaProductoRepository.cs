@@ -1,10 +1,11 @@
 ﻿using SegundaOportunidad.Domain.Entities;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+
+
 namespace SegundaOportunidad.Repository.Interfaces
 {
-    public interface ICategoriaProducto
+    public interface ICategoriaProductoRepository: IBaseRepository<CategoriaProducto>
     {
-        Task <IEnumerable<CategoriaProducto>>GetAllCategories();
+        IEnumerable<CategoriaProducto> GetCategorias();
     }
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SegundaOportunidad.Domain.Entities
 {
     public class Producto
     {
+        [Key]
         public int Producto_ID { get; set; }
         public string Nombre { get; set; }
         public int? Modelo_ID { get; set; }
