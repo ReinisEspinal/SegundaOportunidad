@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SegundaOportunidad.Repository
+namespace SegundaOportunidad.Domain.Entities
 {
     public class CategoriaProducto
     {

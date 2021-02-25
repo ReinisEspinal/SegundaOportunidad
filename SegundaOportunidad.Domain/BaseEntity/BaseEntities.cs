@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SegundaOportunidad.Domain.BaseEntities
+namespace SegundaOportunidad.Domain.BaseEntity
 {
     public class BaseEntities
     {
