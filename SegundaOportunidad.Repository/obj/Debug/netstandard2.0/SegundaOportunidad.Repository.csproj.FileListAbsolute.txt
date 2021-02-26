@@ -1,0 +1,12 @@
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\bin\Debug\netstandard2.0\SegundaOportunidad.Repository.deps.json
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\bin\Debug\netstandard2.0\SegundaOportunidad.Repository.dll
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\bin\Debug\netstandard2.0\SegundaOportunidad.Repository.pdb
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\bin\Debug\netstandard2.0\SegundaOportunidad.Domain.dll
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\bin\Debug\netstandard2.0\SegundaOportunidad.Domain.pdb
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.csprojAssemblyReference.cache
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.AssemblyInfoInputs.cache
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.AssemblyInfo.cs
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.csproj.CoreCompileInputs.cache
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.csproj.CopyComplete
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.dll
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Repository\obj\Debug\netstandard2.0\SegundaOportunidad.Repository.pdb

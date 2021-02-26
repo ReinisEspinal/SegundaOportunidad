@@ -1,0 +1,8 @@
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\bin\Debug\netstandard2.0\SegundaOportunidad.Services.deps.json
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\bin\Debug\netstandard2.0\SegundaOportunidad.Services.dll
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\bin\Debug\netstandard2.0\SegundaOportunidad.Services.pdb
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\obj\Debug\netstandard2.0\SegundaOportunidad.Services.AssemblyInfoInputs.cache
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\obj\Debug\netstandard2.0\SegundaOportunidad.Services.AssemblyInfo.cs
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\obj\Debug\netstandard2.0\SegundaOportunidad.Services.csproj.CoreCompileInputs.cache
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\obj\Debug\netstandard2.0\SegundaOportunidad.Services.dll
+D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Services\obj\Debug\netstandard2.0\SegundaOportunidad.Services.pdb

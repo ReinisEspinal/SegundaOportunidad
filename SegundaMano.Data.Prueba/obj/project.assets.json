@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SegundaOportunidad.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        }
+      },
+      "SegundaOportunidad.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        }
+      },
+      "SegundaOportunidad.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SegundaOportunidad.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj",
+      "msbuildProject": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj"
+    },
+    "SegundaOportunidad.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj",
+      "msbuildProject": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj"
+    },
+    "SegundaOportunidad.Services/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Services/SegundaOportunidad.Services.csproj",
+      "msbuildProject": "../SegundaOportunidad.Services/SegundaOportunidad.Services.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "SegundaOportunidad.Domain >= 1.0.0",
+      "SegundaOportunidad.Repository >= 1.0.0",
+      "SegundaOportunidad.Services >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Reinis\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaMano.Data.Prueba\\SegundaMano.Data.Prueba.csproj",
+      "projectName": "SegundaMano.Data.Prueba",
+      "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaMano.Data.Prueba\\SegundaMano.Data.Prueba.csproj",
+      "packagesPath": "C:\\Users\\Reinis\\.nuget\\packages\\",
+      "outputPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaMano.Data.Prueba\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Reinis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Domain\\SegundaOportunidad.Domain.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Domain\\SegundaOportunidad.Domain.csproj"
+            },
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj"
+            },
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Services\\SegundaOportunidad.Services.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Services\\SegundaOportunidad.Services.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
