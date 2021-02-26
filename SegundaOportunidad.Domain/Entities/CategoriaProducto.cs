@@ -11,10 +11,11 @@ namespace SegundaOportunidad.Domain.Entities
         public int Categoria_Producto_ID { get; set; }
        public string Nombre { get; set; }
 
-
         public CategoriaProducto()
         {
 
         }
+
+    
     }
 }

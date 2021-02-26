@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SegundaOportunidad.Domain.Entities
 {
-    public class Proveedor
+    public class Proveedor : BaseEntities.BaseEntity
     {
         [Key]
         public int Proveedor_ID { get; set; }

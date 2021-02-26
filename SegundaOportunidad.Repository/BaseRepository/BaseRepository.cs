@@ -20,6 +20,7 @@ namespace SegundaOportunidad.Repository.BaseRepository
             this._entity = context.Set<TEntity>();
         }
 
+      
         public Task Add(params TEntity[] entities)
         {
             throw new NotImplementedException();
@@ -33,6 +34,7 @@ namespace SegundaOportunidad.Repository.BaseRepository
         public async Task<bool> Commit()
         {
             return await context.SaveChangesAsync() > 0;
+
         }
 
         public Task<TEntity> Find(Expression<Func<TEntity, bool>> filter)
@@ -45,9 +47,9 @@ namespace SegundaOportunidad.Repository.BaseRepository
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> GetById(int value)
+        public async Task<TEntity> GetById(int value)
         {
-            throw new NotImplementedException();
+            return await _entity.FindAsync(value);
         }
 
         public void Remove(TEntity entity)

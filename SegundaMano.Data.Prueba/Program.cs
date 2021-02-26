@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SegundaOportunidad.Domain.Entities;
 using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Repositories;
@@ -11,17 +12,23 @@ namespace SegundaMano.Data.Prueba
         {
             string cnnString = @"Data Source = MSI\SQLEXPRESS01;Initial Catalog =DB_SEGUNDA_OPORTUNIDAD; Integrated Security = True; MultipleActiveResultSets=True";
 
-            using (SegundaOportunidadContext context = new SegundaOportunidadContext(cnnString))
+            try
             {
-                CategoriaProductoRepository oCateriaPR = new CategoriaProductoRepository(context);
-                CategoriaProducto oC = new CategoriaProducto() { 
-                Nombre="Zapatos"};
+                using (SegundaOportunidadContext context = new SegundaOportunidadContext(cnnString))
+                {
+                    CategoriaProductoRepository oCategoriaRep = new CategoriaProductoRepository(context);
+                    var a=oCategoriaRep.GetById(1);
 
-                oCateriaPR.AgregarCategoria(oC);
-                oCateriaPR.Commit();
-                Console.WriteLine("Agregado"+oC.Nombre);
-                Console.ReadLine();
+                    Console.WriteLine(a);
+                    Console.ReadLine();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+              
         }
     }
 }

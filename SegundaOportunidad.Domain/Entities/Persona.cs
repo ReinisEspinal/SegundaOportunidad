@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SegundaOportunidad.Domain.Entities
 {
-    public class Persona
+    public class Persona : BaseEntities.BaseEntity
     {
         [Key]
         public int Persona_ID { get; set; }

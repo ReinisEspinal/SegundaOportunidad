@@ -4,7 +4,6 @@ using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SegundaOportunidad.Repository.Repositories
@@ -18,9 +17,9 @@ namespace SegundaOportunidad.Repository.Repositories
             this.segundaOportunidadContext = segundaOportunidadContext;
         }
 
-
-        public IEnumerable<CategoriaProducto> GetCategorias() => FindAll(cd => !cd.Deleted);
-
-        public Task AgregarCategoria(CategoriaProducto oC) => Add(oC);
+        public async Task<CategoriaProducto> GetCategoriaByID(int id)
+        {
+           return await GetById(id);
+        }
     }
 }

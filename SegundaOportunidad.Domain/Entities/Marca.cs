@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SegundaOportunidad.Domain.Entities
 {
-    public class Marca
+    public class Marca : BaseEntities.BaseEntity
     {
         [Key]
         public int Marca_ID { get; set; }

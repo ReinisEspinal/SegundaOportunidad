@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SegundaOportunidad.Domain.Entities
 {
-    public class Producto
+    public class Producto : BaseEntities.BaseEntity
     {
         [Key]
         public int Producto_ID { get; set; }
@@ -19,10 +19,12 @@ namespace SegundaOportunidad.Domain.Entities
 
         public virtual ICollection<CategoriaProducto> CategoriasProductos { get; set; }
         public virtual ICollection<Modelo> Modelos { get; set; }
+        public virtual ICollection<Proveedor> Proveedores { get; set; }
         public Producto()
         {
             CategoriasProductos = new HashSet<CategoriaProducto>();
             Modelos = new HashSet<Modelo>();
+            Proveedores = new HashSet<Proveedor>();
 
         }
     }
