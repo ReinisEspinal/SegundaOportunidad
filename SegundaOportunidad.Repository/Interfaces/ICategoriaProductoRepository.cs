@@ -4,8 +4,10 @@ using System.Threading.Tasks;
 
 namespace SegundaOportunidad.Repository.Interfaces
 {
-    public interface ICategoriaProductoRepository: IBaseRepository<CategoriaProducto>
+    public interface ICategoriaProductoRepository : IBaseRepository<CategoriaProducto>
     {
-       Task<CategoriaProducto> GetCategoriaByID(int id);
+        Task<CategoriaProducto> GetCategoriaByID(int id);
+        Task AddCategoria(CategoriaProducto c);
+        Task SaveCategoria();
     }
 }

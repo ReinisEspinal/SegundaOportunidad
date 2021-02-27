@@ -28,12 +28,12 @@ namespace SegundaOportunidad.Repository.BaseRepository
 
         public virtual async Task Add(TEntity entity)
         {
-            await _entity.AddAsync(entity);
+            await context.AddAsync(entity);
         }
 
         public async Task<bool> Commit()
         {
-            return await context.SaveChangesAsync() > 0;
+            return await context.SaveChangesAsync()>0;
 
         }
 
