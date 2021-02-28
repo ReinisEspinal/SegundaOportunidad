@@ -20,49 +20,44 @@ namespace SegundaOportunidad.Repository.BaseRepository
             this._entity = context.Set<TEntity>();
         }
 
-      
-        public Task Add(params TEntity[] entities)
-        {
-            throw new NotImplementedException();
-        }
-
         public virtual async Task Add(TEntity entity)
         {
-            await context.AddAsync(entity);
+            await _entity.AddAsync(entity);
         }
-
-        public async Task<bool> Commit()
+        public virtual async Task Add(params TEntity[] entities)
         {
-            return await context.SaveChangesAsync()>0;
+            await _entity.AddRangeAsync(entities);
 
         }
-
-        public Task<TEntity> Find(Expression<Func<TEntity, bool>> filter)
+        public virtual void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _entity.Update(entity);
         }
-
+        public virtual void Remove(TEntity entity)
+        {
+            _entity.Remove(entity);
+        }
+        public async Task<TEntity> Find(Expression<Func<TEntity, bool>> filter)
+        {
+            return await _entity.SingleOrDefaultAsync(filter);
+        }
         public IEnumerable<TEntity> FindAll(Expression<Func<TEntity, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _entity.Where(filter);
         }
-
         public async Task<TEntity> GetById(int value)
         {
             return await _entity.FindAsync(value);
         }
-
-        public void Remove(TEntity entity)
+        public virtual async Task<bool> Exists(Expression<Func<TEntity, bool>> filter)
         {
-            throw new NotImplementedException();
+            return await _entity.AnyAsync(filter);
         }
-
+        public virtual async Task<bool> Commit()
+        {
+            return await context.SaveChangesAsync() > 0;
+        }
         public Task<bool> RollBack()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TEntity entity)
         {
             throw new NotImplementedException();
         }

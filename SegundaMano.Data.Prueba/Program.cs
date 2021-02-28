@@ -17,29 +17,47 @@ namespace SegundaMano.Data.Prueba
             {
                 using (var db = new SegundaOportunidadContext(cnnString))
                 {
-                  var oCategoria = new CategoriaProductoRepository(db);
-
+                    var oCategoria = new CategoriaProductoRepository(db);
                     var x = new CategoriaProducto()
                     {
-                        Nombre = "Cell",
-                        Deleted = false
+                        Categoria_Producto_ID = 1
                     };
 
+                    #region PRUEBA DEL METODO AddCategoria
+                    /*var x = new CategoriaProducto()
+                    {
+                        Nombre = "Herramienta",
+                        Deleted = false
+                    };*/
                     //  await oCategoria.AddCategoria(x);
                     // await oCategoria.Commit();
-
-                    /*db.TBL_CATEGORIA_PRODUCTO.Add(x);
-                    db.SaveChanges();
-                    Console.WriteLine("Agregado");*/
-
-                    foreach (var b in oCategoria.Listar())
+                    #endregion
+                    #region PRUEBA DEL METODO UpdateCategoria
+                    /*var x = new CategoriaProducto()
                     {
-                        Console.WriteLine(b);
-                    }
+                        Categoria_Producto_ID = 8,
+                        Nombre = "Herramienta",
+                        Deleted = false
+                    };*/
+                    // oCategoria.UpdateCategoria(x);
+                    #endregion
+                    #region PRUEBA DEL METODO RemoveCategoria
+                    //oCategoria.RemoveCategoria(x);
+                    #endregion
+                    #region PRUEBA DEL METODO GetCategorias
+                    /* foreach (var b in oCategoria.GetCategorias())
+                     {
+                         Console.WriteLine(b.Nombre);
+                     }*/
+                    #endregion
+                    #region PRUEBA DEL METODO GetCategoriaByID
+                    var c=await oCategoria.GetCategoriaByID(2);
+                    Console.Write(c.Nombre);
+                    #endregion
                 }
             }
             catch (Exception)
-           {
+            {
                 throw;
             }
             Console.ReadLine();

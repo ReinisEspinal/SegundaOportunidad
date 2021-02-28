@@ -12,8 +12,8 @@ namespace SegundaOportunidad.Domain.BaseEntities
             this.Deleted = false;
         }
 
-        public int CreationUser { get; set; }
-        public DateTime CreationDate { get; set; }
+        public int? CreationUser { get; set; }
+        public DateTime? CreationDate { get; set; }
 
         public int? UserMod { get; set; }
         public DateTime? ModifyDate { get; set; }

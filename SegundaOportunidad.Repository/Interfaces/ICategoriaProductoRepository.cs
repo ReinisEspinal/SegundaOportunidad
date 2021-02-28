@@ -6,8 +6,11 @@ namespace SegundaOportunidad.Repository.Interfaces
 {
     public interface ICategoriaProductoRepository : IBaseRepository<CategoriaProducto>
     {
-        Task<CategoriaProducto> GetCategoriaByID(int id);
         Task AddCategoria(CategoriaProducto c);
+        void UpdateCategoria(CategoriaProducto c);
+        void RemoveCategoria(CategoriaProducto c);
+        IEnumerable<CategoriaProducto> GetCategorias();
+        Task<CategoriaProducto> GetCategoriaByID(int id);
         Task SaveCategoria();
     }
 }
