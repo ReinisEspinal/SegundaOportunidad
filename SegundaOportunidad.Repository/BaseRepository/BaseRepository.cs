@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SegundaOportunidad.Domain;
 using SegundaOportunidad.Domain.BaseEntity;
 using System.Threading.Tasks;
 

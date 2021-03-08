@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SegundaOportunidad.Services.Contracts
 {
-    public interface ICategoriaProductoService
+    public interface ICategoriaProductoService 
     {
-        CategoriaProducto GetCategorias();
-        Task <CategoriaProductoResult> SaveCategoria(CategoriaProducto oCategoria);
-        Task<CategoriaProductoResult> UpdateCategoria(CategoriaProducto oCategoria);
+        CategoriaProductoResult GetCategorias();
+        Task <CategoriaProductoResult> SaveCategoria(Models.CategoriaProductoServicesModel oCategoria);
+        Task<CategoriaProductoResult> UpdateCategoria(Models.CategoriaProductoServicesModel oCategoria);
         Task<CategoriaProductoResult> GetCategoriaById(int Id);
     }
 }

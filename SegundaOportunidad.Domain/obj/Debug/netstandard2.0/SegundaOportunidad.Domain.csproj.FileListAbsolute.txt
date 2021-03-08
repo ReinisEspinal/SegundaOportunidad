@@ -6,4 +6,3 @@ D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportuni
 D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Domain\obj\Debug\netstandard2.0\SegundaOportunidad.Domain.csproj.CoreCompileInputs.cache
 D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Domain\obj\Debug\netstandard2.0\SegundaOportunidad.Domain.dll
 D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Domain\obj\Debug\netstandard2.0\SegundaOportunidad.Domain.pdb
-D:\CONIN\TECNOLOGO PROGRAMACION .NET\Proyecto\SegundaOportunidad\SegundaOportunidad.Domain\obj\Debug\netstandard2.0\SegundaOportunidad.Domain.csprojAssemblyReference.cache
