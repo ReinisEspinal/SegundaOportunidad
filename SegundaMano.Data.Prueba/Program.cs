@@ -51,8 +51,8 @@ namespace SegundaMano.Data.Prueba
                      }*/
                     #endregion
                     #region PRUEBA DEL METODO GetCategoriaByID
-                    var c=await oCategoria.GetCategoriaByID(2);
-                    Console.Write(c.Nombre);
+                    //var c=await oCategoria.GetCategoriaByID(2);
+                    //Console.Write(c.Nombre);
                     #endregion
                 }
             }

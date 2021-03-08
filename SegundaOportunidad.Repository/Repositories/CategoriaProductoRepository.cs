@@ -50,5 +50,10 @@ namespace SegundaOportunidad.Repository.Repositories
         {
             await base.Commit();
         }
+
+        public async Task<bool> ExisteCategoria()
+        {
+            return await base.Exists(x=> !x.Deleted);
+        }
     }
 }
