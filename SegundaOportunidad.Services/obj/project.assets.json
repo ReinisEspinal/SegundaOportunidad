@@ -25,6 +25,26 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "SegundaOportunidad.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        }
+      },
+      "SegundaOportunidad.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        }
       }
     }
   },
@@ -172,11 +192,23 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "SegundaOportunidad.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj",
+      "msbuildProject": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj"
+    },
+    "SegundaOportunidad.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj",
+      "msbuildProject": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "SegundaOportunidad.Domain >= 1.0.0",
+      "SegundaOportunidad.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -210,7 +242,14 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Domain\\SegundaOportunidad.Domain.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Domain\\SegundaOportunidad.Domain.csproj"
+            },
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
