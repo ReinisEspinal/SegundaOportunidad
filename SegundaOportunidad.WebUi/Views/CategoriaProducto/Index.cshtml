@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SegundaOportunidad.WebUi.Models.CategoriaProductoWebUiModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Categoria producto</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Crear nuevo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria_Producto_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria_Producto_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Categoria_Producto_ID }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

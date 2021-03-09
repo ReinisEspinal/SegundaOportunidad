@@ -4630,6 +4630,48 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "SegundaOportunidad.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Domain.dll": {}
+        }
+      },
+      "SegundaOportunidad.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
+          "SegundaOportunidad.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Repository.dll": {}
+        }
+      },
+      "SegundaOportunidad.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SegundaOportunidad.Domain": "1.0.0",
+          "SegundaOportunidad.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SegundaOportunidad.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SegundaOportunidad.Services.dll": {}
+        }
       }
     }
   },
@@ -12634,6 +12676,21 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "SegundaOportunidad.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj",
+      "msbuildProject": "../SegundaOportunidad.Domain/SegundaOportunidad.Domain.csproj"
+    },
+    "SegundaOportunidad.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj",
+      "msbuildProject": "../SegundaOportunidad.Repository/SegundaOportunidad.Repository.csproj"
+    },
+    "SegundaOportunidad.Services/1.0.0": {
+      "type": "project",
+      "path": "../SegundaOportunidad.Services/SegundaOportunidad.Services.csproj",
+      "msbuildProject": "../SegundaOportunidad.Services/SegundaOportunidad.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12649,7 +12706,9 @@
       "Microsoft.Extensions.Logging.Debug >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.1.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
+      "SegundaOportunidad.Repository >= 1.0.0",
+      "SegundaOportunidad.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12683,7 +12742,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Repository\\SegundaOportunidad.Repository.csproj"
+            },
+            "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Services\\SegundaOportunidad.Services.csproj": {
+              "projectPath": "D:\\CONIN\\TECNOLOGO PROGRAMACION .NET\\Proyecto\\SegundaOportunidad\\SegundaOportunidad.Services\\SegundaOportunidad.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
