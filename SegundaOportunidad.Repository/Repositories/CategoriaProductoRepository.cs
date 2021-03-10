@@ -46,9 +46,9 @@ namespace SegundaOportunidad.Repository.Repositories
             return lst;
         }*/
         #endregion
-        public async Task SaveCategoria()
+        public async Task<bool> SaveCategoria()
         {
-            await base.Commit();
+           return await base.Commit();
         }
 
         public async Task<bool> ExisteCategoria()

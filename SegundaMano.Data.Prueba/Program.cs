@@ -15,7 +15,7 @@ namespace SegundaMano.Data.Prueba
             Console.WriteLine("***LISTA DE PUREBA***");
             try
             {
-                using (var db = new SegundaOportunidadContext(cnnString))
+                using (var db = new SegundaOportunidadContext(/*cnnString*/))
                 {
                     var oCategoria = new CategoriaProductoRepository(db);
                     var x = new CategoriaProducto()

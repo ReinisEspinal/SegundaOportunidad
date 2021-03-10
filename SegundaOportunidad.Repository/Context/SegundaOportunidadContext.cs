@@ -6,16 +6,16 @@ namespace SegundaOportunidad.Repository.Context
     public class SegundaOportunidadContext : DbContext
     {
         private string _cnnString;
-        public SegundaOportunidadContext(string _cnnString)
+        public SegundaOportunidadContext(/*string _cnnString*/)
         {
-            this._cnnString = _cnnString;
+            //this._cnnString = _cnnString;
         }
         public SegundaOportunidadContext(DbContextOptions<SegundaOportunidadContext> options) : base(options)
         {
 
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        { options.UseSqlServer(_cnnString); }
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //{ options.UseSqlServer(_cnnString); }
 
 
       //  public virtual DbSet<Almacen> TBL_ALMACEN { get; set; }

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Interfaces;
 using SegundaOportunidad.Repository.Repositories;
+using SegundaOportunidad.Services;
 using SegundaOportunidad.Services.Contracts;
 
 namespace SegundaOportunidad.WebUi
@@ -31,9 +32,9 @@ namespace SegundaOportunidad.WebUi
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<SegundaOportunidadContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("SchoolContext")));
+            services.AddDbContext<SegundaOportunidadContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("SegundaOportunidadContext")));
             services.AddScoped<ICategoriaProductoRepository,CategoriaProductoRepository>();
-            services.AddTransient<ICategoriaProductoService, DepartmentService>();
+            services.AddTransient<ICategoriaProductoService, CategoriaProductoService>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SegundaOportunidad.Services.Contracts;
-using SegundaOportunidad.Services.Core;
 using SegundaOportunidad.Services.Models;
-using SegundaOportunidad.Services.ResultCategoriaProducto.cs;
+using SegundaOportunidad.Services.Result.Core;
+using SegundaOportunidad.Services.Result.Models;
+using SegundaOportunidad.WebUi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,18 @@ namespace SegundaOportunidad.WebUi.Controllers
     {
         private readonly ICategoriaProductoService _CategoriaService;
 
+        public CategoriaProductoController(ICategoriaProductoService categoriaProductoService)
+        {
+            _CategoriaService = categoriaProductoService;
+        }
+
         // GET: CategoriaProductoServicesModelController
         public ActionResult Index()
         {
-            var result = _CategoriaService.GetCategorias();
+            var result =  _CategoriaService.GetCategorias();
 
-            var Categorias = ((List<ResultCategoriaProducto>)result.Data).Select(cat => new CategoriaProductoServicesModel()
+            var Categorias = ((List<ResultCategoriaProductoModel>)result.Data).Select(cat => new CategoriaProductoWebUiModel()
             {
-                Categoria_Producto_ID = cat.Categoria_Producto_ID,
                 Nombre = cat.Nombre
             }).ToList();
 
@@ -78,11 +83,11 @@ namespace SegundaOportunidad.WebUi.Controllers
         // GET: CategoriaProductoServicesModelController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            ResultCategoriaProducto resultcatarment = (ResultCategoriaProducto)(await _CategoriaService.GetCategoriaById(id)).Data;
+            ResultCategoriaProductoModel resultCategoria = (ResultCategoriaProductoModel)(await _CategoriaService.GetCategoriaById(id)).Data;
 
             var catarmentEdit = new CategoriaProductoServicesModel()
             {
-               Nombre = resultcatarment.Nombre
+               Nombre = resultCategoria.Nombre
             };
 
 

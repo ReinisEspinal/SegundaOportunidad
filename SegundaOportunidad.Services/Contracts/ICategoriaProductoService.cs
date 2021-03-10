@@ -9,7 +9,7 @@ namespace SegundaOportunidad.Services.Contracts
 {
     public interface ICategoriaProductoService 
     {
-        ResultCategoriaProductoModel GetCategorias();
+        ResultCategoriaProducto GetCategorias();
         Task <ResultCategoriaProducto> SaveCategoria(Models.CategoriaProductoServicesModel oCategoria);
         Task<ResultCategoriaProducto> UpdateCategoria(Models.CategoriaProductoServicesModel oCategoria);
         Task<ResultCategoriaProducto> GetCategoriaById(int Id);

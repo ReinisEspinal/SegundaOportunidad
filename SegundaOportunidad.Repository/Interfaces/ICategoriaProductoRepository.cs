@@ -12,6 +12,6 @@ namespace SegundaOportunidad.Repository.Interfaces
         IEnumerable<CategoriaProducto> GetCategorias();
         Task<CategoriaProducto> GetCategoriaByID(int id);
         Task<bool> ExisteCategoria();
-        Task SaveCategoria();
+        Task<bool> SaveCategoria();
     }
 }
