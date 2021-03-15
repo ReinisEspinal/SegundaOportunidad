@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SegundaOportunidad.Services.Result.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

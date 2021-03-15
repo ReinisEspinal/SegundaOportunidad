@@ -21,32 +21,97 @@ namespace SegundaOportunidad.WebUi.Controllers
             _CategoriaService = categoriaProductoService;
         }
 
-        // GET: CategoriaProductoServicesModelController
+        // GET: CategoriaProducto
+        [HttpGet]
         public ActionResult Index()
         {
-            var result =  _CategoriaService.GetCategorias();
+            var result = _CategoriaService.GetCategorias();
 
-            var Categorias = ((List<ResultCategoriaProductoModel>)result.Data).Select(cat => new CategoriaProductoWebUiModel()
+            var Categorias = ((List<ResultCategoriaProductoServiceModel>)result.Data).Select(cat => new CategoriaProductoWebUiModel()
             {
+                Categoria_Producto_ID = cat.Categoria_Producto_ID,
                 Nombre = cat.Nombre
             }).ToList();
 
             return View(Categorias);
         }
 
-        // GET: CategoriaProductoServicesModelController/Details/5
-        public ActionResult Details(int id)
+        // GET: CategoriaProductoController/Details/5
+        [HttpGet]
+        public async Task<ActionResult> Details(int id)
         {
-            return View();
+            ResultCategoriaProductoServiceModel result = new ResultCategoriaProductoServiceModel();
+
+            result = (ResultCategoriaProductoServiceModel)(await _CategoriaService.GetCategoriaById(id)).Data;
+            CategoriaProductoWebUiModel oCategoriaProductoWebUiModel = new CategoriaProductoWebUiModel()
+            {
+                Categoria_Producto_ID = result.Categoria_Producto_ID,
+                Nombre = result.Nombre
+
+            };
+            return View(oCategoriaProductoWebUiModel);
+
         }
 
-        // GET: CategoriaProductoServicesModelController/Create
+        // GET: CategoriaProductoController/Edit/5
+        [HttpGet]
+        public async Task<ActionResult> Edit(int id)
+        {
+            ResultCategoriaProductoServiceModel resultCategoria = (ResultCategoriaProductoServiceModel)(await _CategoriaService.GetCategoriaById(id)).Data;
+
+            var catarmentEdit = new CategoriaProductoWebUiModel()
+            {
+                Categoria_Producto_ID = resultCategoria.Categoria_Producto_ID,
+                Nombre = resultCategoria.Nombre
+            };
+
+
+            return View(catarmentEdit);
+        }
+
+        // POST: CategoriaProductoController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(CategoriaProductoWebUiModel categoriaWebUiModel)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+
+                var result = await _CategoriaService.UpdateCategoria(new CategoriaProductoServicesModel()
+                {
+                    Categoria_Producto_ID = categoriaWebUiModel.Categoria_Producto_ID,
+                    Nombre = categoriaWebUiModel.Nombre
+                });
+
+                if (!result.success)
+                {
+                    ViewData["Message"] = result.message;
+                    return View();
+                }
+
+                return RedirectToAction(nameof(Index));
+
+
+
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: CategoriaProductoController/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CategoriaProductoServicesModelController/Create
+        // POST: CategoriaProductoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(CategoriaProductoServicesModel CategoriaProductoServicesModel)
@@ -62,52 +127,6 @@ namespace SegundaOportunidad.WebUi.Controllers
             {
                 result = await _CategoriaService.SaveCategoria(new CategoriaProductoServicesModel()
                 {
-                   Nombre = CategoriaProductoServicesModel.Nombre
-                });
-
-                if (!result.success)
-                {
-                    ViewData["Message"] = result.message;
-                    return View();
-
-                }
-                return RedirectToAction(nameof(Index));
-
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CategoriaProductoServicesModelController/Edit/5
-        public async Task<ActionResult> Edit(int id)
-        {
-            ResultCategoriaProductoModel resultCategoria = (ResultCategoriaProductoModel)(await _CategoriaService.GetCategoriaById(id)).Data;
-
-            var catarmentEdit = new CategoriaProductoServicesModel()
-            {
-               Nombre = resultCategoria.Nombre
-            };
-
-
-            return View(catarmentEdit);
-        }
-
-        // POST: CategoriaProductoServicesModelController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(CategoriaProductoServicesModel CategoriaProductoServicesModel)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
-
-                var result = await _CategoriaService.UpdateCategoria(new CategoriaProductoServicesModel()
-                {
                     Nombre = CategoriaProductoServicesModel.Nombre
                 });
 
@@ -115,11 +134,9 @@ namespace SegundaOportunidad.WebUi.Controllers
                 {
                     ViewData["Message"] = result.message;
                     return View();
+
                 }
-
                 return RedirectToAction(nameof(Index));
-
-
 
             }
             catch
@@ -128,25 +145,5 @@ namespace SegundaOportunidad.WebUi.Controllers
             }
         }
 
-        // GET: CategoriaProductoServicesModelController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: CategoriaProductoServicesModelController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

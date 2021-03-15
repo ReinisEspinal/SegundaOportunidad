@@ -9,9 +9,11 @@ namespace SegundaOportunidad.Services.Contracts
 {
     public interface ICategoriaProductoService 
     {
-        ResultCategoriaProducto GetCategorias();
-        Task <ResultCategoriaProducto> SaveCategoria(Models.CategoriaProductoServicesModel oCategoria);
-        Task<ResultCategoriaProducto> UpdateCategoria(Models.CategoriaProductoServicesModel oCategoria);
-        Task<ResultCategoriaProducto> GetCategoriaById(int Id);
+        ServiceResultCategoriaProducto GetCategorias();
+        Task <ServiceResultCategoriaProducto> SaveCategoria(Models.CategoriaProductoServicesModel oCategoria);
+        Task<ServiceResultCategoriaProducto> UpdateCategoria(Models.CategoriaProductoServicesModel oCategoria);
+        Task<ServiceResultCategoriaProducto> DeleteCategoria(Models.CategoriaProductoServicesModel oCategoria);
+        Task<ServiceResultCategoriaProducto> GetCategoriaById(int Id);
+
     }
 }

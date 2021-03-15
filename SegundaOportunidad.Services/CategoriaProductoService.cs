@@ -20,17 +20,19 @@ namespace SegundaOportunidad.Services
             _categoriaProductoRep = categoriaProductoRep;
             _logger = logger;
         }
-        public async Task<ResultCategoriaProducto> GetCategoriaById(int id)
+        public async Task<ServiceResultCategoriaProducto> GetCategoriaById(int id)
         {
-            var result = new ResultCategoriaProducto();
+            var result = new ServiceResultCategoriaProducto();
 
             try
             {
                 var oCategoria = await _categoriaProductoRep.GetCategoriaByID(id);
 
-                result.Data = new ResultCategoriaProductoModel()
+                result.Data = new ResultCategoriaProductoServiceModel()
                 {
+                    Categoria_Producto_ID = oCategoria.Categoria_Producto_ID,
                     Nombre = oCategoria.Nombre
+
 
                 };
             }
@@ -41,16 +43,17 @@ namespace SegundaOportunidad.Services
                 result.message = "Error obteniendo la categoria";
             }
 
-            return result.Data;
+            return result;
         }
-        public ResultCategoriaProducto GetCategorias()
+        public ServiceResultCategoriaProducto GetCategorias()
         {
-            ResultCategoriaProducto result = new ResultCategoriaProducto();
+            ServiceResultCategoriaProducto result = new ServiceResultCategoriaProducto();
 
             try
             {
-                result.Data = _categoriaProductoRep.FindAll(d => !d.Deleted).Select(d => new ResultCategoriaProductoModel()
+                result.Data = _categoriaProductoRep.FindAll(d => !d.Deleted).Select(d => new ResultCategoriaProductoServiceModel()
                 {
+                    Categoria_Producto_ID = d.Categoria_Producto_ID,
                     Nombre = d.Nombre
 
                 }).ToList();
@@ -63,9 +66,9 @@ namespace SegundaOportunidad.Services
             }
             return result;
         }
-        public async Task<ResultCategoriaProducto> SaveCategoria(CategoriaProductoServicesModel oCategoria)
+        public async Task<ServiceResultCategoriaProducto> SaveCategoria(CategoriaProductoServicesModel oCategoria)
         {
-            ResultCategoriaProducto result = new ResultCategoriaProducto();
+            ServiceResultCategoriaProducto result = new ServiceResultCategoriaProducto();
             try
             {
                 if (await ValidateCategoria(oCategoria.Nombre))
@@ -90,16 +93,18 @@ namespace SegundaOportunidad.Services
 
             return result.Data;
         }
-        public async Task<ResultCategoriaProducto> UpdateCategoria(CategoriaProductoServicesModel oCategoria)
+        public async Task<ServiceResultCategoriaProducto> UpdateCategoria(CategoriaProductoServicesModel oCategoria)
         {
-            ResultCategoriaProducto result = new ResultCategoriaProducto();
+            ServiceResultCategoriaProducto result = new ServiceResultCategoriaProducto();
             try
             {
-                _categoriaProductoRep.UpdateCategoria(new CategoriaProducto()
-                {
-                    Categoria_Producto_ID = oCategoria.Categoria_Producto_ID,
-                    Nombre = oCategoria.Nombre
-                });
+                var categoriaUpdate = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_ID);
+               
+                categoriaUpdate.Nombre = oCategoria.Nombre;
+
+                _categoriaProductoRep.UpdateCategoria(categoriaUpdate);
+
+                await _categoriaProductoRep.SaveCategoria();
 
                 result.message = await _categoriaProductoRep.SaveCategoria() ? "Categoria editada" : "Error editando la categoria";
                 result.Data = oCategoria;
@@ -113,6 +118,31 @@ namespace SegundaOportunidad.Services
             }
 
             return result.Data;
+        }
+        public async Task<ServiceResultCategoriaProducto> DeleteCategoria(CategoriaProductoServicesModel oCategoria)
+        {
+            ServiceResultCategoriaProducto result = new ServiceResultCategoriaProducto();
+            try
+            {
+              
+                var categoriaDelete = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_ID);
+                categoriaDelete.Categoria_Producto_ID = oCategoria.Categoria_Producto_ID;
+                categoriaDelete.Deleted = true;
+
+                _categoriaProductoRep.UpdateCategoria(categoriaDelete);
+
+                await _categoriaProductoRep.SaveCategoria();
+                result.message = await _categoriaProductoRep.SaveCategoria() ? "Categoria eliminada" : "Error eliminando la categoria";
+                result.Data = oCategoria;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Error{e.Message}");
+                result.success = false;
+                result.message = "Error en la eliminacion de la categoria";
+            }
+
+            return result;
         }
         private async Task<bool> ValidateCategoria(string nombre)
         {

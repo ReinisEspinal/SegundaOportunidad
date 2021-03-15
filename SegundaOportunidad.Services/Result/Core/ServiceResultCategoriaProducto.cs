@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SegundaOportunidad.Services.Result.Core
 {
-  public  class ResultCategoriaProducto : ServiceResult
+  public  class ServiceResultCategoriaProducto : ServiceResult
     {
     }
 }
