@@ -14,6 +14,7 @@ namespace SegundaOportunidad.Repository.BaseRepository
         private readonly DbContext context;
         private DbSet<TEntity> _entity;
 
+   
         public BaseRepository(Context.SegundaOportunidadContext segundaOportunidadContext)
         {
             this.context = segundaOportunidadContext;

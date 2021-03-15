@@ -15,14 +15,11 @@ namespace SegundaMano.Data.Prueba
             Console.WriteLine("***LISTA DE PUREBA***");
             try
             {
-                using (var db = new SegundaOportunidadContext(/*cnnString*/))
+                using (var db = new SegundaOportunidadContext(cnnString))
                 {
-                    var oCategoria = new CategoriaProductoRepository(db);
-                    var x = new CategoriaProducto()
-                    {
-                        Categoria_Producto_ID = 1
-                    };
 
+                    #region Pruebas unitarias CRUD CategoriaProducto
+                    //Inicio de pruebas
                     #region PRUEBA DEL METODO AddCategoria
                     /*var x = new CategoriaProducto()
                     {
@@ -51,14 +48,67 @@ namespace SegundaMano.Data.Prueba
                      }*/
                     #endregion
                     #region PRUEBA DEL METODO GetCategoriaByID
-                    //var c=await oCategoria.GetCategoriaByID(2);
-                    //Console.Write(c.Nombre);
+                    // var c = await oCategoria.GetCategoriaByID(2);
+                    // Console.Write(c.Nombre);
                     #endregion
+                    //Fin de las pruebas
+                    #endregion
+                    #region Pruebas unitarias CRUD Marca
+                    //Inicio de preubas
+                    #region PRUEBA METODO AddMarca
+                    //var _marcaRepository = new MarcaRepository(db);
+                    //Marca oMarca = new Marca
+                    //{
+                    //    Nombre = "Adidas",
+                    //    Fecha = Convert.ToDateTime("3/1/2021"),
+                    //    Deleted = false,
+                    //    CreationDate = Convert.ToDateTime("3/1/2021")
+                    //};
+                    //await _marcaRepository.AddMarca(oMarca);
+                    #endregion
+                    #region PRUEBA METODO UpdateMarca
+                    //var _marcaRepository = new MarcaRepository(db);
+
+                    //Marca oMarca = new Marca()
+                    //{
+                    //    Marca_ID = 1,
+                    //    Nombre = "Jordan",
+                    //    Fecha = Convert.ToDateTime("03/15/2021")
+                    //};
+
+                    //_marcaRepository.UpdateMarca(oMarca);
+                    //await _marcaRepository.SaveMarca();
+                    //var x = await _marcaRepository.GetMarcaById(1);
+
+                    // Console.Write(x.Nombre);
+                    #endregion
+                    #region PRUEBA METODO GetMarcas
+                    //var _marcaRepository = new MarcaRepository(db);
+
+                    //var listaMarcas = _marcaRepository.GetMarcas();
+
+                    //foreach (var marca in listaMarcas)
+                    //{
+                    //    Console.WriteLine(marca.Nombre);
+                    //}
+
+                    #endregion
+                    #region PRUEBA METODO GetMarcaById
+                    //var _marcaRepository = new MarcaRepository(db);
+
+                    //var x = await _marcaRepository.GetMarcaById(1);
+                    //Console.WriteLine(x.Nombre);
+                    #endregion
+                    //Fin de las pruebas
+                    #endregion
+                    #region Pruebas unitarias CRUD Modelo
+                    #endregion
+
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new Exception(e.Message);
             }
             Console.ReadLine();
         }

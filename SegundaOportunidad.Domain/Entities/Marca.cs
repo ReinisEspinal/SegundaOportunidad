@@ -13,7 +13,7 @@ namespace SegundaOportunidad.Domain.Entities
         public DateTime Fecha { get; set; }
         public Marca()
         {
-
+           
         }
     }
 }

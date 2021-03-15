@@ -6,21 +6,22 @@ namespace SegundaOportunidad.Repository.Context
     public class SegundaOportunidadContext : DbContext
     {
         private string _cnnString;
-        public SegundaOportunidadContext(/*string _cnnString*/)
+        public SegundaOportunidadContext(string _cnnString)
         {
-            //this._cnnString = _cnnString;
+            this._cnnString = _cnnString;
         }
         public SegundaOportunidadContext(DbContextOptions<SegundaOportunidadContext> options) : base(options)
         {
 
         }
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //{ options.UseSqlServer(_cnnString); }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        { options.UseSqlServer(_cnnString); }
 
 
-        //  public virtual DbSet<Almacen> TBL_ALMACEN { get; set; }
+     
         public virtual DbSet<CategoriaProducto> TBL_CATEGORIA_PRODUCTO { get; set; }
-        public virtual DbSet<CategoriaProducto> TBL_MARCA { get; set; }
+        public virtual DbSet<Marca> TBL_MARCA { get; set; }
+           //  public virtual DbSet<Almacen> TBL_ALMACEN { get; set; }
         //public virtual DbSet<Marca> TBL_MARCA { get; set; }
         //public virtual DbSet<ConceptoVenta> TBL_CONCEPTO_VENTA { get; set; }
         //public virtual DbSet<Donacion> TBL_DONACION { get; set; }

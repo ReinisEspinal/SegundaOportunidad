@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.Services
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaOportunidad.WebUi", "SegundaOportunidad.WebUi\SegundaOportunidad.WebUi.csproj", "{C57EE091-2BF7-438C-8872-AE5A2D7FB839}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegundaMano.Data.Prueba", "SegundaMano.Data.Prueba\SegundaMano.Data.Prueba.csproj", "{744B0926-6543-41A3-942A-9DD968E2DE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaMano.Data.Prueba", "SegundaMano.Data.Prueba\SegundaMano.Data.Prueba.csproj", "{744B0926-6543-41A3-942A-9DD968E2DE2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F630F196-ACE3-4B1F-921F-B742B30755B8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

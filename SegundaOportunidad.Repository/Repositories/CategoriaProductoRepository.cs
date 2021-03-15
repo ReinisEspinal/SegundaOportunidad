@@ -2,10 +2,9 @@
 using SegundaOportunidad.Repository.BaseRepository;
 using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
+
 namespace SegundaOportunidad.Repository.Repositories
 {
     public class CategoriaProductoRepository : BaseRepository<CategoriaProducto>, ICategoriaProductoRepository
@@ -36,8 +35,8 @@ namespace SegundaOportunidad.Repository.Repositories
         }
         public async Task<CategoriaProducto> GetCategoriaByID(int id)
         {
-            
-            return await base.GetById(id);
+            var X = await base.GetById(id);
+            return X;
         }
         #region UTILIZANDO LINQ PARA OBTENER DATOS
         /*public List<string> Listar()
