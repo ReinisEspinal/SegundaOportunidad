@@ -36,6 +36,12 @@ namespace SegundaOportunidad.WebUi
             services.AddScoped<ICategoriaProductoRepository,CategoriaProductoRepository>();
             services.AddTransient<ICategoriaProductoService, CategoriaProductoService>();
 
+            services.AddScoped<IModeloRepository, ModeloRepository>();
+            services.AddTransient<IModeloService, ModeloService>();
+
+            services.AddScoped<IMarcaRepository, MarcaRepository>();
+            services.AddTransient<IMarcaService, MarcaService>();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

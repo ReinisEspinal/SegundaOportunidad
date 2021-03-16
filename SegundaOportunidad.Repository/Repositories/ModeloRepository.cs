@@ -1,26 +1,26 @@
 ﻿using SegundaOportunidad.Domain.Entities;
-using SegundaOportunidad.Repository.Interfaces;
 using SegundaOportunidad.Repository.BaseRepository;
 using SegundaOportunidad.Repository.Context;
+using SegundaOportunidad.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System;
 
 namespace SegundaOportunidad.Repository.Repositories
 {
-    public class MarcaRepository : BaseRepository<Marca>, IMarcaRepository
+    public class ModeloRepository : BaseRepository<Modelo>,IModeloRepository
     {
         private readonly SegundaOportunidadContext db;
 
-        public MarcaRepository(SegundaOportunidadContext db) : base(db)
+        public ModeloRepository(SegundaOportunidadContext db) : base(db)
         {
             this.db = db;
         }
-        public async Task AddMarca(Marca marca)
+        public async Task AddModelo(Modelo Modelo)
         {
             try
             {
-                await base.Add(marca);
+                await base.Add(Modelo);
             }
             catch (Exception e)
             {
@@ -29,11 +29,11 @@ namespace SegundaOportunidad.Repository.Repositories
             }
         }
 
-        public void UpdateMarca(Marca marca)
+        public void UpdateModelo(Modelo Modelo)
         {
             try
             {
-                base.Update(marca);
+                base.Update(Modelo);
             }
             catch (Exception e)
             {
@@ -41,12 +41,11 @@ namespace SegundaOportunidad.Repository.Repositories
             }
         }
 
-        public IEnumerable<Marca> GetMarcas()
+        public IEnumerable<Modelo> GetModelos()
         {
             try
             {
-                var x = base.FindAll(oMarca => !oMarca.Deleted);
-                return x;
+                return base.FindAll(oModelo => !oModelo.Deleted);
             }
             catch (Exception e)
             {
@@ -54,7 +53,7 @@ namespace SegundaOportunidad.Repository.Repositories
             }
         }
 
-        public async Task<Marca> GetMarcaById(int id)
+        public async Task<Modelo> GetModeloById(int id)
         {
             try
             {
@@ -66,11 +65,11 @@ namespace SegundaOportunidad.Repository.Repositories
             }
         }
 
-        public async Task<bool> ExisteMarca()
+        public async Task<bool> ExisteModelo()
         {
             try
             {
-                return await base.Exists(oMarca => !oMarca.Deleted);
+                return await base.Exists(oModelo => !oModelo.Deleted);
             }
             catch (Exception e)
             {
@@ -80,10 +79,9 @@ namespace SegundaOportunidad.Repository.Repositories
 
         }
 
-        public async Task<bool> SaveMarca()
+        public async Task<bool> SaveModelo()
         {
             return await base.Commit();
         }
-
     }
 }

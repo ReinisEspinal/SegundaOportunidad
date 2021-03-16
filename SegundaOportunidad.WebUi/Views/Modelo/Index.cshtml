@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SegundaOportunidad.Services.Result.Models.ResultModeloServiceModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Modelos</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.Hidden("Model_Id")
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                @Html.Hidden("Marca_Id")
+            </th>
+            <th>
+                Marca
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Hidden("Model_Id")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.Hidden("Marca_Id")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreMarca)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

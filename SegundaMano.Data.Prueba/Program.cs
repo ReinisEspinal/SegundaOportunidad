@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using SegundaOportunidad.Domain.Entities;
-using SegundaOportunidad.Repository.Context;
+﻿using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Repositories;
+using System;
 using System.Threading.Tasks;
 namespace SegundaMano.Data.Prueba
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static async Task Main (string[] args)
         {
-            string cnnString = @"Data Source = MSI\SQLEXPRESS01;Initial Catalog =DB_SEGUNDA_OPORTUNIDAD; Integrated Security = True; MultipleActiveResultSets=True";
+           // string cnnString = @"Data Source = MSI\SQLEXPRESS01;Initial Catalog =DB_SEGUNDA_OPORTUNIDAD; Integrated Security = True; MultipleActiveResultSets=True";
 
             Console.WriteLine("***LISTA DE PUREBA***");
             try
             {
-                using (var db = new SegundaOportunidadContext(cnnString))
+                using (var db = new SegundaOportunidadContext(/*cnnString*/))
                 {
-
                     #region Pruebas unitarias CRUD CategoriaProducto
                     //Inicio de pruebas
                     #region PRUEBA DEL METODO AddCategoria
@@ -102,8 +99,55 @@ namespace SegundaMano.Data.Prueba
                     //Fin de las pruebas
                     #endregion
                     #region Pruebas unitarias CRUD Modelo
-                    #endregion
+                    //Inicio de preubas
+                    #region PRUEBA METODO AddModelo
+                    //var _ModeloRepository = new ModeloRepository(db);
+                    //Modelo oModelo = new Modelo
+                    //{
+                    //    Marca_ID = 1,
+                    //    Nombre="JORDAN 23",
+                    //    Deleted = false
+                    //};
+                    //await _ModeloRepository.AddModelo(oModelo);
+                    //await _ModeloRepository.SaveModelo();
 
+                    //Console.WriteLine(oModelo.Nombre);
+                    #endregion
+                    #region PRUEBA METODO UpdateModelo
+                    //var _ModeloRepository = new ModeloRepository(db);
+
+                    //Modelo oModelo = new Modelo()
+                    //{
+                    //    Modelo_ID = 1,
+                    //    Nombre = "Jordan",
+                    //    Fecha = Convert.ToDateTime("03/15/2021")
+                    //};
+
+                    //_ModeloRepository.UpdateModelo(oModelo);
+                    //await _ModeloRepository.SaveModelo();
+                    //var x = await _ModeloRepository.GetModeloById(1);
+
+                    // Console.Write(x.Nombre);
+                    #endregion
+                    #region PRUEBA METODO GetModelos
+                    //var _ModeloRepository = new ModeloRepository(db);
+
+                    //var listaModelos = _ModeloRepository.GetModelos();
+
+                    //foreach (var Modelo in listaModelos)
+                    //{
+                    //    Console.WriteLine(Modelo.Nombre);
+                    //}
+
+                    #endregion
+                    #region PRUEBA METODO GetModeloById
+                    //var _ModeloRepository = new ModeloRepository(db);
+
+                    //var x = await _ModeloRepository.GetModeloById(1);
+                    //Console.WriteLine(x.Nombre);
+                    #endregion
+                    //Fin de las pruebas
+                    #endregion
                 }
             }
             catch (Exception e)
