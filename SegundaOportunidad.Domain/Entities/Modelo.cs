@@ -12,10 +12,11 @@ namespace SegundaOportunidad.Domain.Entities
         public int Marca_ID { get; set; }
 
         public virtual Marca Marca { get; set; }
-
+        public virtual ICollection<Producto> Productos { get; set; }
         public Modelo()
         {
-      
+            Productos = new HashSet<Producto>();
+
         }
     }
 }

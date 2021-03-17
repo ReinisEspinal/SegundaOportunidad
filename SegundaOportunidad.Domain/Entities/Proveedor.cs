@@ -8,14 +8,15 @@ namespace SegundaOportunidad.Domain.Entities
     public class Proveedor : BaseEntities.BaseEntity
     {
         [Key]
-        public int Proveedor_ID { get; set; }
+        public int Proveedor_Id { get; set; }
 
         public string Nombre { get; set; }
         public string Direccion { get; set; }
 
+        public virtual ICollection<Producto> Productos { get; set; }
         public Proveedor()
         {
-
+            this.Productos = new HashSet<Producto>();
         }
     }
 }

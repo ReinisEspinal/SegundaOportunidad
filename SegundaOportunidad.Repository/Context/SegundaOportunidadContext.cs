@@ -5,19 +5,19 @@ namespace SegundaOportunidad.Repository.Context
 {
     public class SegundaOportunidadContext : DbContext
     {
-        //private string _cnnString;
-        public SegundaOportunidadContext(/*string _cnnString*/)
+        private string _cnnString;
+        public SegundaOportunidadContext(string _cnnString)
         {
-        //        this._cnnString = _cnnString;
+            this._cnnString = _cnnString;
         }
         public SegundaOportunidadContext(DbContextOptions<SegundaOportunidadContext> options) : base(options)
         {
 
         }
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //{
-        //    options.UseSqlServer(_cnnString);
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(_cnnString);
+        }
 
         public virtual DbSet<CategoriaProducto> TBL_CATEGORIA_PRODUCTO { get; set; }
         public virtual DbSet<Marca> TBL_MARCA { get; set; }
@@ -32,7 +32,15 @@ namespace SegundaOportunidad.Repository.Context
         //public virtual DbSet<Producto> TBL_PRODUCTO { get; set; }
         //public virtual DbSet<Proveedor> TBL_PROVEEDOR { get; set; }
         //public virtual DbSet<Venta> TBL_VENTA { get; set; }
-      
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DonacionProducto>()
+                .HasKey(o => new { o.Donacion_Id, o.Producto_Id });
+
+
+            modelBuilder.Entity<InventarioProducto>()
+                .HasKey(i => new { i.Inventario_Id, i.Producto_Id });
+        }
     }
 }

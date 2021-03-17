@@ -30,7 +30,7 @@ namespace SegundaOportunidad.Services
 
                 result.Data = new ResultCategoriaProductoServiceModel()
                 {
-                    Categoria_Producto_ID = oCategoria.Categoria_Producto_ID,
+                    Categoria_Producto_Id = oCategoria.Categoria_Producto_Id,
                     Nombre = oCategoria.Nombre
 
 
@@ -53,7 +53,7 @@ namespace SegundaOportunidad.Services
             {
                 result.Data = _categoriaProductoRep.FindAll(d => !d.Deleted).Select(d => new ResultCategoriaProductoServiceModel()
                 {
-                    Categoria_Producto_ID = d.Categoria_Producto_ID,
+                    Categoria_Producto_Id = d.Categoria_Producto_Id,
                     Nombre = d.Nombre
 
                 }).ToList();
@@ -85,7 +85,7 @@ namespace SegundaOportunidad.Services
                 await _categoriaProductoRep.Add(newCategoriaProducto);
                 result.message = await _categoriaProductoRep.SaveCategoria() ? "Categoria Agregada" : "Error agregando la categoria";
 
-                oCategoria.Categoria_Producto_ID = newCategoriaProducto.Categoria_Producto_ID;
+                oCategoria.Categoria_Producto_Id = newCategoriaProducto.Categoria_Producto_Id;
 
                 result.Data = oCategoria;
             }
@@ -98,7 +98,7 @@ namespace SegundaOportunidad.Services
             ServiceResultCategoriaProducto result = new ServiceResultCategoriaProducto();
             try
             {
-                var categoriaUpdate = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_ID);
+                var categoriaUpdate = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_Id);
                
                 categoriaUpdate.Nombre = oCategoria.Nombre;
 
@@ -125,8 +125,8 @@ namespace SegundaOportunidad.Services
             try
             {
               
-                var categoriaDelete = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_ID);
-                categoriaDelete.Categoria_Producto_ID = oCategoria.Categoria_Producto_ID;
+                var categoriaDelete = await _categoriaProductoRep.GetCategoriaByID(oCategoria.Categoria_Producto_Id);
+                categoriaDelete.Categoria_Producto_Id = oCategoria.Categoria_Producto_Id;
                 categoriaDelete.Deleted = true;
 
                 _categoriaProductoRep.UpdateCategoria(categoriaDelete);

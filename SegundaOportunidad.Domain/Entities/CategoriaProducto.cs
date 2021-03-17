@@ -11,14 +11,15 @@ namespace SegundaOportunidad.Domain.Entities
 
         [Key]
         [Column("CATEGORIA_PRODUCTO_ID")]
-        public int Categoria_Producto_ID { get; set; }
-       public string Nombre { get; set; }
+        public int Categoria_Producto_Id { get; set; }
+        public string Nombre { get; set; }
+        public virtual ICollection<Producto> Productos { get; set; }
 
         public CategoriaProducto()
         {
-
+            this.Productos = new HashSet<Producto>();
         }
 
-    
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using SegundaOportunidad.Repository.Context;
+﻿using SegundaOportunidad.Domain.Entities;
+using SegundaOportunidad.Repository.Context;
 using SegundaOportunidad.Repository.Repositories;
 using System;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ namespace SegundaMano.Data.Prueba
     {
         static async Task Main (string[] args)
         {
-           // string cnnString = @"Data Source = MSI\SQLEXPRESS01;Initial Catalog =DB_SEGUNDA_OPORTUNIDAD; Integrated Security = True; MultipleActiveResultSets=True";
+           string cnnString = @"Data Source = MSI\SQLEXPRESS01;Initial Catalog =DB_SEGUNDA_OPORTUNIDAD; Integrated Security = True; MultipleActiveResultSets=True";
 
             Console.WriteLine("***LISTA DE PUREBA***");
             try
             {
-                using (var db = new SegundaOportunidadContext(/*cnnString*/))
+                using (var db = new SegundaOportunidadContext(cnnString))
                 {
                     #region Pruebas unitarias CRUD CategoriaProducto
                     //Inicio de pruebas
@@ -29,7 +30,7 @@ namespace SegundaMano.Data.Prueba
                     #region PRUEBA DEL METODO UpdateCategoria
                     /*var x = new CategoriaProducto()
                     {
-                        Categoria_Producto_ID = 8,
+                        Categoria_Producto_Id = 8,
                         Nombre = "Herramienta",
                         Deleted = false
                     };*/
@@ -39,10 +40,11 @@ namespace SegundaMano.Data.Prueba
                     //oCategoria.RemoveCategoria(x);
                     #endregion
                     #region PRUEBA DEL METODO GetCategorias
-                    /* foreach (var b in oCategoria.GetCategorias())
-                     {
-                         Console.WriteLine(b.Nombre);
-                     }*/
+                    //var _categoriaRepository = new CategoriaProductoRepository(db);
+                    //foreach (var b in _categoriaRepository.GetCategorias())
+                    //{
+                    //    Console.WriteLine(b.Nombre);
+                    //}
                     #endregion
                     #region PRUEBA DEL METODO GetCategoriaByID
                     // var c = await oCategoria.GetCategoriaByID(2);
@@ -56,12 +58,13 @@ namespace SegundaMano.Data.Prueba
                     //var _marcaRepository = new MarcaRepository(db);
                     //Marca oMarca = new Marca
                     //{
-                    //    Nombre = "Adidas",
+                    //    Nombre = "Nautica",
                     //    Fecha = Convert.ToDateTime("3/1/2021"),
                     //    Deleted = false,
                     //    CreationDate = Convert.ToDateTime("3/1/2021")
                     //};
                     //await _marcaRepository.AddMarca(oMarca);
+                    //await _marcaRepository.SaveMarca();
                     #endregion
                     #region PRUEBA METODO UpdateMarca
                     //var _marcaRepository = new MarcaRepository(db);

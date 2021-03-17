@@ -29,7 +29,7 @@ namespace SegundaOportunidad.WebUi.Controllers
 
             var Categorias = ((List<ResultCategoriaProductoServiceModel>)result.Data).Select(cat => new CategoriaProductoWebUiModel()
             {
-                Categoria_Producto_ID = cat.Categoria_Producto_ID,
+                Categoria_Producto_Id = cat.Categoria_Producto_Id,
                 Nombre = cat.Nombre
             }).ToList();
 
@@ -45,7 +45,7 @@ namespace SegundaOportunidad.WebUi.Controllers
             result = (ResultCategoriaProductoServiceModel)(await _CategoriaService.GetCategoriaById(id)).Data;
             CategoriaProductoWebUiModel oCategoriaProductoWebUiModel = new CategoriaProductoWebUiModel()
             {
-                Categoria_Producto_ID = result.Categoria_Producto_ID,
+                Categoria_Producto_Id = result.Categoria_Producto_Id,
                 Nombre = result.Nombre
 
             };
@@ -61,7 +61,7 @@ namespace SegundaOportunidad.WebUi.Controllers
 
             var catarmentEdit = new CategoriaProductoWebUiModel()
             {
-                Categoria_Producto_ID = resultCategoria.Categoria_Producto_ID,
+                Categoria_Producto_Id = resultCategoria.Categoria_Producto_Id,
                 Nombre = resultCategoria.Nombre
             };
 
@@ -83,7 +83,7 @@ namespace SegundaOportunidad.WebUi.Controllers
 
                 var result = await _CategoriaService.UpdateCategoria(new CategoriaProductoServicesModel()
                 {
-                    Categoria_Producto_ID = categoriaWebUiModel.Categoria_Producto_ID,
+                    Categoria_Producto_Id = categoriaWebUiModel.Categoria_Producto_Id,
                     Nombre = categoriaWebUiModel.Nombre
                 });
 

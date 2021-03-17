@@ -8,18 +8,15 @@ namespace SegundaOportunidad.Domain.Entities
     public class Inventario : BaseEntities.BaseEntity
     {
         [Key]
-        public int Inventario_ID { get; set; }
-        public int Almacen_ID { get; set; }
-        public int Producto_ID { get; set; }
+        public int Inventario_Id { get; set; }
+        public int Almacen_Id { get; set; }
         public DateTime Fecha { get; set; }
-        public int Cantidad { get; set; }
 
-        public virtual ICollection<Almacen> Almacenes { get; set; }
-        public virtual ICollection<Producto> Productos { get; set; }
+        public virtual Almacen Almacen { get; set; }
+        public virtual ICollection<InventarioProducto> InventariosProductos { get; set; }
         public Inventario()
         {
-            Almacenes = new HashSet<Almacen>();
-            Productos = new HashSet<Producto>();
+            this.InventariosProductos = new HashSet<InventarioProducto>();
         }
     }
 }
